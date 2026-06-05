@@ -6,6 +6,8 @@ public class PersonagemController : MonoBehaviour
 {
     public Rigidbody2D rb2d;  
     public float vel;
+    public float jumpForce;
+    public GameObject groundCheck;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,10 @@ public class PersonagemController : MonoBehaviour
         if(rb2d.velocity.magnitude < 5)
         {
             rb2d.velocity += new Vector2(vel,0)* HorizontalInput *Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rb2d.velocity = new Vector2(rb2d.velocity.x,jumpForce);
         }
     }
 }
