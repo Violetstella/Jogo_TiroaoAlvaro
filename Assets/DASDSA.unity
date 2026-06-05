@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 313302916}
   - component: {fileID: 313302917}
+  - component: {fileID: 313302918}
   m_Layer: 0
   m_Name: groundCheck
   m_TagString: Untagged
@@ -167,9 +168,23 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.1}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &313302918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313302915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ba137306439864eb7d66f34d08c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Collider2D: {fileID: 313302917}
+  isOnGrounded: 1
 --- !u!1 &774655404
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +428,7 @@ MonoBehaviour:
   rb2d: {fileID: 837852511}
   vel: 23.78
   jumpForce: 2.52
+  groundCheck: {fileID: 313302915}
 --- !u!61 &837852510
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -473,7 +489,7 @@ GameObject:
   - component: {fileID: 1276538741}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,9 +553,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276538738}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.73, y: -2.67, z: 0}
-  m_LocalScale: {x: 21.405334, y: 1, z: 1}
+  m_LocalScale: {x: 21.405336, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
