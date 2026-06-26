@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 99
   m_Sprite: {fileID: -369455497, guid: 633f5a6a41a406e4d8b093be50fcdd42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Collider2d: {fileID: 2115453280169325212}
+  coinParticle: {fileID: 689214298776845596, guid: d934b562ffc823345802d31ddd62de44, type: 3}
 --- !u!58 &2115453280169325212
 CircleCollider2D:
   m_ObjectHideFlags: 0

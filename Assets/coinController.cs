@@ -5,12 +5,16 @@ using UnityEngine;
 public class coinController : MonoBehaviour
 {
     public CircleCollider2D Collider2d;
+    public GameObject coinParticle;
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player")){
             Destroy(this.gameObject);
             Point point = other.GetComponent<Point>();
             point.AddPoints();
+            Instantiate(coinParticle,
+                        this.transform.position,
+                        Quaternion.Euler(-90,0,0));
 
         }
     }
